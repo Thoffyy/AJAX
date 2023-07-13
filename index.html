@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div>
+
+    <input id="buscaFilmePorNomePersonagemId"/>
+
+    <button id="botaoBuscaFilmeId">
+
+        Buscar Filme por Nome de Personagem
+
+    </button>
+
+</div>  
+Filme de <label id="labelFilmeDeId"></label>
+
+<div>
+
+    <table id="tabelaFilmesId" border="1">
+
+        <tr>
+
+            <th>Nome</th>
+
+            <th>Episódio</th>
+
+            <th>Diretor</th>
+
+        </tr>
+
+    </table>
+
+
+    <hr>
+
+
+    <script>
+        var callbackFunction = function(data) {
+            console.log(data);
+        };
+    </script>
+    
+    <script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='são paulo, sp')&format=json&callback=callbackFunction"></script>
+
+</div>
+
+
+</body>
+</html>
